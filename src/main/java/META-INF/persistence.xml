@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="cabinet-reports">
+		<class>laf.reports.AirBarrierContainment</class>
+		<class>laf.reports.AirVelocityProfile</class>
+		<class>laf.reports.Client</class>
+		<class>laf.reports.CorrectionFactor</class>
+		<class>laf.reports.Equipment</class>
+		<class>laf.reports.Department</class>
+		<class>laf.reports.FilterIntegrity</class>
+		<class>laf.reports.IlluminanceTest</class>
+		<class>laf.reports.InstallationGaugePressure</class>
+		<class>laf.reports.Instrument</class>
+		<class>laf.reports.Report</class>
+		<class>laf.reports.SoundLevel</class>
+		<class>laf.reports.Technician</class>
+		<class>laf.reports.UvRadiationIntensity</class>
+		<class>laf.reports.WorkZoneIntegrity</class>
+	</persistence-unit>
+</persistence>

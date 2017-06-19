@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="icon" href="../images/icon.ico" th:href="@{images/icon.ico}"/>
+
+    <title>LAFTech Reports</title>
+
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" media="all"/>
+
+    <!-- Custom styles for this template -->
+    <link type="text/css" rel="stylesheet" th:href="@{css/custom.min.css}" media="all"/>    
+  </head>
+
+  <body>
+  
+     <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+        	<div>
+        		<a th:href="@{/index}"><img th:src="@{images/lafheaderblackbg.png}" src="../images/lafheaderblackbg.png" class="img-responsive" alt="logo"/></a>
+    		</div>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Reports <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="#">Create New</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Update Existing</a></li>
+                <li><a href="#">View</a></li>                
+              </ul>
+            </li>
+            <li>
+              <a href="#">Help</a>
+            </li>            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><label th:inline="text">[[${#httpServletRequest.remoteUser}]]!</label> <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+               	<li><a th:href="@{/logout}">Sign Out</a></li>  
+                <li class="divider"></li>  
+ 	          </ul>
+			</li>	
+          </ul>
+        </div>
+      </div>
+	</div>
+	
+	  <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>LAF Technologies </h1>
+            <p class="lead">Cabinet Reports</p>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-4">
+            <div class="list-group table-of-contents">
+              <a class="list-group-item" th:href="@{/index}">LAF Reports</a>
+              <a class="list-group-item" th:href="@{/clients}">Clients</a>
+              <a class="list-group-item" th:href="@{/equipments}">Equipments</a>
+              <a class="list-group-item" th:href="@{/technicians}">Technicians</a>
+              <a class="list-group-item" th:href="@{/instruments}">Instruments</a>                           
+            </div>
+          </div>
+        </div>
+        </div>
+        
+	</div>
+
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js}"></script>    
+    <script th:src="@{js/bootstrap.min.js}" src="../js/bootstrap.min.js"></script> 
+    <script th:src="@{js/custom.js}" src="../js/custom.js"></script>   
+  </body>
+</html>
